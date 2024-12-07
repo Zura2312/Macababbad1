@@ -9,15 +9,15 @@
 </head>
 <body>
     <div class="container col-xxl-8 px-4 py-5">
-        <header class="d-flex justify-content-center py-3">
+        <header class="d-flex justify-content-center">
           <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-            <li class="nav-item"><a href="mailto:email.com" class="nav-link">Contact</a></li>
-            
+            <li class="nav-item"><a href="#" class="nav-link custom-button">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link custom-button">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link custom-button">Projects</a></li>
+            <li class="nav-item"><a href="mailto:email.com" class="nav-link custom-button">Contact</a></li>
           </ul>
         </header>
+        <hr>
     </div>
 
     <div class="container col-xxl-8 px-4 py-5">
@@ -29,15 +29,15 @@
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Hi there! My name is Erol Macababbad</h1>
             <p class="lead">A junior web developer passionate about creating minimalist and engaging websites based in Philippines.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Projects</button>
-              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Resume</button>
+                <button id="projectsBtn" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Projects</button>
+                <button id="aboutBtn" type="button" class="btn btn-outline-secondary btn-lg px-4">About</button>
             </div>
           </div>
         </div>
     </div>
   
     <div class="container col-xxl-8 px-4 py-5  aboutMe">
-        <h2>About Me</h2>
+        <h2 id="About">About Me</h2>
         <p class="lead">
             Erol is a passionate and creative junior web designer with a strong foundation in front-end development and design principles. Skilled in HTML, CSS, and JavaScript, as well as design tools like Adobe XD and Figma, Erol has a keen eye for detail and a commitment to creating user-friendly, visually appealing websites. Eager to grow and learn, they are excited to contribute to projects, collaborate with teams, and continuously improve their design skills to deliver engaging digital experiences.
 
@@ -46,7 +46,7 @@
     </div>
 
    <div class="container col-xxl-8 px-4 py-5">
-        <h2>Projects</h2>
+        <h2 id="Projects">Projects</h2>
         <div class="container lead projects">
             <div class="card" style="width: 18rem;">
                 <img src="images/tm.png" class="card-img-top" alt="..." style="height: 190px;">
@@ -93,16 +93,27 @@
    </div>
 
    <div class="container col-xxl-8 px-4 py-5">
+    <hr>
     <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Projects</a></li>
-        <li class="nav-item"><a href="mailto:email.com" class="nav-link px-2 text-body-secondary">Contact</a></li>
-        
-      </ul>
-      <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
-    </footer>
+        <p>&copy; 2024 Erol Macababbad. All Rights Reserved.</p>
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/erolrydon.macababbad" target="_blank">
+              <img src="images/facebook-logo.png" alt="Facebook">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/er_macababbad/" target="_blank">
+              <img src="images/instagram-logo.png" alt="Instagram">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Zura2312" target="_blank">
+              <img src="images/github-logo.png" alt="GitHub">
+            </a>
+          </li>
+        </ul>
+      </footer>
   </div>
     
 
@@ -110,5 +121,17 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("projectsBtn").addEventListener("click", function () {
+          document.getElementById("Projects").scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+    <script>
+        document.getElementById("aboutBtn").addEventListener("click", function () {
+          document.getElementById("About").scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+
+      
 </body>
 </html>
